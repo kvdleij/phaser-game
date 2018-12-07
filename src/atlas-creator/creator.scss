@@ -1,0 +1,62 @@
+$border-color: #ddd;
+$grid-color: #009daa;
+$grid-active-color: #aa7f30;
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+aside {
+  border-right: 1px solid $border-color;
+  height: 100%;
+  max-width: 15%;
+  padding: 1rem;
+
+  fieldset {
+    border: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: .5rem;
+  }
+}
+
+label,
+input {
+  margin-bottom: .5rem;
+}
+
+article {
+  padding: 1rem;
+  position: relative;
+}
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  height: calc(100% - 2rem);
+  left: 1rem;
+  position: absolute;
+  top: 1rem;
+  width: calc(100% - 2rem);
+
+  &__cell {
+    outline: 1px solid $grid-color;
+
+    &--active {
+      background-color: rgba($grid-active-color, .5);
+    }
+  }
+}

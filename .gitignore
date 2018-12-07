@@ -1,0 +1,9 @@
+/.idea
+/node_modules
+*/node_modules
+/**/*.css
+/**/*.min.css
+/**/*.min.js
+/**/*.map
+
+
